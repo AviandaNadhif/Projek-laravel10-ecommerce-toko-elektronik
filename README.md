@@ -1,8 +1,6 @@
 # Projek laravel10 ecommerce toko elektronik
 
-Tugas Akhir Web Programming membuat Web dengan Laravel
-Terinspirasi serta mengambil beberapa source code dari:
-https://github.com/Prajwal100/Complete-Ecommerce-in-laravel-10 
+Tugas Akhir Web Programming membuat Web dengan Laravel 10
 
 Untuk menjalankan code:
 1. ganti direktori ke filenya
