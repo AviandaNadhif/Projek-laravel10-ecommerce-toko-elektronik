@@ -202,7 +202,7 @@
     // Route::get('blog-tag/{slug}', [FrontendController::class, 'blogByTag'])->name('blog.tag');
 
 // Newsletter
-    Route::post('/subscribe', [FrontendController::class, 'subscribe'])->name('subscribe');
+
 
 // Ulasan Produk
     Route::resource('/review', 'ProductReviewController');
