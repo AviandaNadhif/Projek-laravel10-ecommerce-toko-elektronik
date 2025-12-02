@@ -374,7 +374,7 @@
                                                 </div>
                                             </form>
                                             <div class="default-social">
-                                            <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+
                                             </div>
                                         </div>
                                     </div>
