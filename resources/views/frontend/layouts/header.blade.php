@@ -72,12 +72,7 @@
                 <div class="col-lg-8 col-md-7 col-12">
                             <div class="search-bar-top">
                         <div class="search-bar">
-                            <select>
-                                <option value="">{{ __('Kategori') }}</option>
-                                @foreach(Helper::getAllCategory() as $cat)
-                                    <option value="{{ $cat->id }}">{{ __($cat->title) }}</option>
-                                @endforeach
-                            </select>
+
                             <form method="POST" action="{{route('product.search')}}">
                                 @csrf
                                 <input name="search" placeholder="Cari Produk di sini..." type="search">
