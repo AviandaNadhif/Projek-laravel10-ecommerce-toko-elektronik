@@ -171,7 +171,7 @@
 	<!-- End Shop Newsletter -->
 
 	<!-- Start Shop Newsletter  -->
-	@include('frontend.layouts.newsletter')
+
 	<!-- End Shop Newsletter -->
 
 @endsection
