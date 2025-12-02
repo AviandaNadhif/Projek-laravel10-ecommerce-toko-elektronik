@@ -317,6 +317,7 @@
 <!-- End Shop Services Area -->
 
 
+
 <!-- Modal -->
 @if($product_lists)
     @foreach($product_lists as $key=>$product)
@@ -443,7 +444,7 @@
                                             </div>
                                         </form>
                                         <div class="default-social">
-                                        <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+
                                         </div>
                                     </div>
                                 </div>
@@ -458,8 +459,7 @@
 @endsection
 
 @push('styles')
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
+    <!-- ShareThis scripts removed to prevent injected widgets during debugging -->
     <style>
         /* Banner Sliding */
         #Gslider .carousel-inner {
