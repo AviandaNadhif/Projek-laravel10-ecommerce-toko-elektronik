@@ -75,8 +75,7 @@
 	<!-- Start Shop Services Area  -->
 
 	<!-- End Shop Newsletter -->
-	
-	@include('frontend.layouts.newsletter')
+
 	
 	
 	
