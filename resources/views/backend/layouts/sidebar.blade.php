@@ -30,7 +30,8 @@
   <!-- Nav Item - Charts -->
   <li class="nav-item">
       <a class="nav-link" href="{{route('file-manager')}}">
-          <i class="fas fa-fw fa-chart-area"></i>
+  <!--       <i class="fas fa-fw fa-chart-area"></i> -->
+          <i class="fas fa-fw fa-folder"></i>
           <span>Manajer Media</span></a>
   </li>
 
@@ -120,7 +121,8 @@
   <!--Orders -->
   <li class="nav-item">
       <a class="nav-link" href="{{route('order.index')}}">
-          <i class="fas fa-hammer fa-chart-area"></i>
+<!--    <i class="fas fa-hammer fa-chart-area"></i> -->
+          <i class="fas fa-shopping-cart"></i>
           <span>Pesanan</span>
       </a>
   </li>
@@ -142,7 +144,7 @@
   </div>
   <li class="nav-item">
     <a class="nav-link" href="{{route('coupon.index')}}">
-        <i class="fas fa-table"></i>
+        <i class="fas fa-ticket-alt"></i>
         <span>Kupon</span></a>
   </li>
    <!-- Users -->
