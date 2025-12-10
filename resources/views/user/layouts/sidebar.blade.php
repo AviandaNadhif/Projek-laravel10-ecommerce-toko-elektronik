@@ -28,7 +28,8 @@
   <!--Orders -->
   <li class="nav-item">
       <a class="nav-link" href="{{route('user.order.index')}}">
-          <i class="fas fa-hammer fa-chart-area"></i>
+          <!--    <i class="fas fa-hammer fa-chart-area"></i> -->
+          <i class="fas fa-shopping-cart"></i>
           <span>Pesanan</span>
       </a>
   </li>
