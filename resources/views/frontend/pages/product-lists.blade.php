@@ -12,7 +12,7 @@
 						<div class="bread-inner">
 							<ul class="bread-list">
 								<li><a href="{{route('home')}}">Beranda<i class="ti-arrow-right"></i></a></li>
-								<li class="active"><a href="javascript:void(0);">Daftar Belanja</a></li>
+								<li class="active"><a href="{{ route('product-lists') }}">Daftar Belanja</a></li>
 							</ul>
 						</div>
 					</div>
@@ -177,9 +177,14 @@
 												</select>
 											</div>
 										</div>
+										@php
+											// preserve current filters when switching view mode
+											$query_params_top = request()->only('show','sortBy','price_range');
+											$qs_top = http_build_query(array_filter($query_params_top));
+										@endphp
 										<ul class="view-mode">
-											<li><a href="{{route('product-grids')}}"><i class="fa fa-th-large"></i></a></li>
-											<li class="active"><a href="javascript:void(0)"><i class="fa fa-th-list"></i></a></li>
+											<li><a href="{{ route('product-grids') }}{{ $qs_top ? '?'.$qs_top : '' }}"><i class="fa fa-th-large"></i></a></li>
+											<li class="active"><a href="{{ route('product-lists') }}{{ $qs_top ? '?'.$qs_top : '' }}"><i class="fa fa-th-list"></i></a></li>
 										</ul>
 									</div>
 									<!--/ End Shop Top -->
@@ -230,7 +235,7 @@
 														{{-- <p>{!! html_entity_decode($product->summary) !!}</p> --}}
 														</div>
 														<p class="des pt-2">{!! html_entity_decode($product->summary) !!}</p>
-														<a href="javascript:void(0)" class="btn cart" data-id="{{$product->id}}">Beli Sekarang!</a>
+														<a href="{{ route('add-to-cart',$product->slug) }}" class="btn">Beli Sekarang!</a>
 													</div>
 												</div>
 											</div>
