@@ -122,7 +122,13 @@
             @if(count($orders)>0)
               @foreach($orders as $order)   
                 <tr>
-                    <td>{{$order->id}}</td>
+                    <td>
+                      @if(method_exists($orders,'currentPage'))
+                        {{ ($orders->currentPage()-1) * $orders->perPage() + $loop->iteration }}
+                      @else
+                        {{ $loop->iteration }}
+                      @endif
+                    </td>
                     <td>{{$order->order_number}}</td>
                     <td>{{$order->first_name}} {{$order->last_name}}</td>
                     <td>{{$order->email}}</td>
@@ -147,6 +153,8 @@
                     </td>
                     <td>
                         <a href="{{route('user.order.show',$order->id)}}" class="btn btn-warning btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="lihat" data-placement="bottom"><i class="fas fa-eye"></i></a>
+                        <a href="{{route('user.order.edit',$order->id)}}" class="btn btn-primary btn-sm float-left mr-1" style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" title="edit" data-placement="bottom"><i class="fas fa-edit"></i></a>
+
                         <form method="POST" action="{{route('user.order.delete',[$order->id])}}">
                           @csrf 
                           @method('delete')
